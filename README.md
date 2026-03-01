@@ -8,7 +8,7 @@
 
 Ensure Docker is installed and running on your machine.
 
-#### Install [mise](https://mise.jdx.dev/).
+#### Install [mise](https://mise.jdx.dev/)
 
 ```bash
 curl https://mise.run | sh
