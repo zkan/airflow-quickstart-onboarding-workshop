@@ -32,3 +32,8 @@ plugins:
 
 nav:
   - Home: index.md
+  - Preparing the Local Development Environment: preparing-local-development-environment.md
+  - GitHub Setup: github-setup.md
+  - Installing Breeze: installing-breeze.md
+  - Starting Contributing: starting-contributing.md
+  - After Your PR Is Merged: after-your-pr-is-merged.md

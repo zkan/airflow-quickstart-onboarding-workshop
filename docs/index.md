@@ -2,8 +2,8 @@
 
 What we'll learn in this workshop:
 
-1. Prepare the Local Development Environment
+1. Preparing the Local Development Environment
 1. GitHub Setup
-1. Install Breeze
-1. Start Contributing
+1. Installing Breeze
+1. Starting Contributing
 1. After Your PR Is Merged (or Before Your Next Contribution)
