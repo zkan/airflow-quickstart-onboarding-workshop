@@ -12,7 +12,11 @@ language support.
 breeze start-airflow
 ```
 
-It may take a moment for Airflow to start. Once it's ready, access the web interface at [http://localhost:28080/](http://localhost:28080){target=_blank}.
+It may take a moment for Airflow to start. Once it's ready, your terminal should look like this:
+
+![Terminal after Breeze to Start Airflow](./img/breeze-start-airflow.png)
+
+You can then access the web interface at [http://localhost:28080/](http://localhost:28080){target=_blank}.
 
 Ports are forwarded to the running docker containers for webserver and database
 - 12322 -> forwarded to Airflow ssh server -> airflow:22
