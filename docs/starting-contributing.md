@@ -61,8 +61,11 @@ Build the documentation.
 breeze build-docs apache-airflow-ctl
 ```
 
-Preview the documentation locally by running `./docs/start_doc_server.sh` for a
-lighter resource option.
+Preview the documentation locally by running the following command for a lighter resource option:
+
+```bash
+./docs/start_doc_server.sh
+```
 
 Then open:
 
