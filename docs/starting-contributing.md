@@ -74,6 +74,24 @@ Then open:
 
 Verify your change appears correctly.
 
+### Example Issue You Can Contribute To
+
+There is a small typo on the Airbyte connection page (as of Mar 10, 2026) that needs to be fixed. See the screenshot below.
+
+![Typo on Airbyte Connection Page](./img/typo-on-airbyte-connection-page.png)
+
+You can search for the text on the page using [grep](https://man7.org/linux/man-pages/man1/grep.1.html){target=_blank} in your terminal.
+
+```bash
+grep -rln 'The Airbyte connection type use the Airbyte API Python SDK' providers/airbyte
+```
+
+![Search Text in Terminal using Grep](./img/search-text-in-terminal-using-grep.png)
+
+Alternatively, you can search for it in VS Code.
+
+![Search Text in VS Code](./img/search-text-in-vs-code.png)
+
 ## Contributing to Translation (UI i18n)
 
 Another easy entry point is improving UI translations.
