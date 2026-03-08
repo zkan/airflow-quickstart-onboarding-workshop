@@ -6,6 +6,12 @@ These are the easiest and most beginner-friendly ways to get involved.
 You don't need to understand Airflow internals — just improve clarity or
 language support.
 
+## Starting Airflow with Breeze
+
+```bash
+breeze start-airflow
+```
+
 ## Contributing to Documentation
 
 Edit a documentation file, e.g., `airflow-ctl/docs/index.rst`.
