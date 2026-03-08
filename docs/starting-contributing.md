@@ -18,6 +18,10 @@ It may take a moment for Airflow to start. Once it's ready, your terminal should
 
 You can then access the web interface at [http://localhost:28080/](http://localhost:28080){target=_blank}.
 
+![Airflow's Sign-in Page|300](./img/airflow-sign-in-page.png){width="300"}
+
+![Airflow's Home Page](./img/airflow-home-page.png)
+
 Ports are forwarded to the running docker containers for webserver and database
 - 12322 -> forwarded to Airflow ssh server -> airflow:22
 - 28080 -> forwarded to Airflow api server (Airflow 3) or webserver (Airflow 2) -> airflow:8080
