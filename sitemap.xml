@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://zkan.github.io/airflow-quickstart-onboarding-workshop/</loc>
+         <lastmod>2026-03-08</lastmod>
+    </url>
+    <url>
+         <loc>https://zkan.github.io/airflow-quickstart-onboarding-workshop/after-your-pr-is-merged/</loc>
+         <lastmod>2026-03-08</lastmod>
+    </url>
+    <url>
+         <loc>https://zkan.github.io/airflow-quickstart-onboarding-workshop/github-setup/</loc>
+         <lastmod>2026-03-08</lastmod>
+    </url>
+    <url>
+         <loc>https://zkan.github.io/airflow-quickstart-onboarding-workshop/installing-breeze/</loc>
+         <lastmod>2026-03-08</lastmod>
+    </url>
+    <url>
+         <loc>https://zkan.github.io/airflow-quickstart-onboarding-workshop/preparing-local-development-environment/</loc>
+         <lastmod>2026-03-08</lastmod>
+    </url>
+    <url>
+         <loc>https://zkan.github.io/airflow-quickstart-onboarding-workshop/starting-contributing/</loc>
+         <lastmod>2026-03-08</lastmod>
+    </url>
+</urlset>
