@@ -12,6 +12,36 @@ language support.
 breeze start-airflow
 ```
 
+It may take a moment for Airflow to start. Once it's ready, access the web interface at [http://localhost:28080/](http://localhost:28080){target=_blank}.
+
+Ports are forwarded to the running docker containers for webserver and database
+- 12322 -> forwarded to Airflow ssh server -> airflow:22
+- 28080 -> forwarded to Airflow api server (Airflow 3) or webserver (Airflow 2) -> airflow:8080
+- 25555 -> forwarded to Flower dashboard -> airflow:5555
+- 25433 -> forwarded to Postgres database -> postgres:5432
+- 23306 -> forwarded to MySQL database  -> mysql:3306
+- 26379 -> forwarded to Redis broker -> redis:6379
+- 25672 -> forwarded to Rabbitmq -> rabbitmq:5672
+
+Direct links to those services that you can use from the host:
+- ssh connection for remote debugging: `ssh -p 12322 airflow@localhost` (password: airflow)
+- API server or webserver: [http://localhost:28080](http://localhost:28080){target=_blank} (username: admin, password: admin)
+- Flower: [http://localhost:25555](http://localhost:25555){target=_blank}
+- Postgres: jdbc:postgresql://localhost:25433/airflow?user=postgres&password=airflow
+- Mysql: jdbc:mysql://localhost:23306/airflow?user=root
+- Redis: redis://localhost:26379/0
+
+- Your dags for webserver and scheduler are read from `/files/dags` directory which is mounted from folder in Airflow sources:
+	- `/Users/zkan/Work/zkan/airflow/files/dags`
+- Your plugins are read from `/files/plugins` directory which is mounted from folder in Airflow sources:
+	- `/Users/zkan/Work/zkan/airflow/files/plugins`
+- You can add `airflow-breeze-config` directory. Place it in `/Users/zkan/Work/zkan/airflow/files/airflow-breeze-config` and:
+	- Add `environment_variables.env` - to make breeze source the variables automatically for you
+	- Add `.tmux.conf` - to add extra initial configuration to `tmux`
+	- Add `init.sh` - this file will be sourced when you enter container, so you can add any custom code there.
+	- Add `requirements.
+- You can also share other files, put them under `/Users/zkan/Work/zkan/airflow/files` folder and they will be visible in `/files/` folder inside the container.
+
 ## Contributing to Documentation
 
 Edit a documentation file, e.g., `airflow-ctl/docs/index.rst`.
