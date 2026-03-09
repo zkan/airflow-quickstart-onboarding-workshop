@@ -77,7 +77,13 @@ Make a small improvement:
 
 Keep the change small and focused.
 
-Build the documentation.
+Before building, check the available documentation package names:
+
+```bash
+breeze build-docs -h
+```
+
+Then build the documentation for the specific package you want, for example:
 
 ```bash
 breeze build-docs apache-airflow-ctl
@@ -116,11 +122,9 @@ Alternatively, you can search for it in VS Code.
 
 ## Contributing to Translation (UI i18n)
 
-Another easy entry point is improving UI translations.
+Improving UI translations is another easy way to start contributing.
 
-Read the Internationalization (i18n) policy
-[here](https://github.com/apache/airflow/blob/main/airflow-core/src/airflow/ui/public/i18n/README.md){target=_blank}.
-This explains how translations are structured.
+Let's start by reading the [internationalization (i18n) policy](https://github.com/apache/airflow/blob/main/airflow-core/src/airflow/ui/public/i18n/README.md){target=_blank}, which explains how translations are organized and structured.
 
 To check translation completeness:
 
@@ -148,6 +152,8 @@ Enjoy translating!
 
 ## Contributing to Airflow Core
 
-We recommend starting by reading existing [pull requests](https://github.com/apache/airflow/pulls){target=_blank} to see how changes are proposed, reviewed, and merged.
+A great way to start is by reviewing existing [pull requests](https://github.com/apache/airflow/pulls){target=_blank} to see how changes are proposed, reviewed, and merged.
 
 This will help you understand the coding style, review process, and expectations for contributors.
+
+Contributing to the core can be more involved than documentation or translation, but it's also a rewarding way to learn, grow your skills, and make a meaningful impact. Take your time and enjoy the process!
