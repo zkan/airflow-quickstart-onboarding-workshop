@@ -2,7 +2,7 @@
 uv = "0.10.0"
 
 [tasks.serve]
-run = "mise exec uv -- uv run mkdocs serve"
+run = "mise exec uv -- uv run mkdocs serve --livereload"
 
 [tasks.export]
 run = "mise exec uv -- uv pip freeze > requirements.txt"
