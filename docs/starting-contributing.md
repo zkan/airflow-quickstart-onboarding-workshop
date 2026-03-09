@@ -132,11 +132,17 @@ To check a specific language (e.g., Thai):
 breeze ui check-translation-completeness --language th
 ```
 
-You can:
+The output of the command above should look like this:
+
+![Check Translation Completeness Output for Thai Language](./img/breeze-check-translation-completeness-output-for-th.png)
+
+You then can:
 
 - Improve existing translations
 - Add missing translations
 - Correct unclear wording
+
+Enjoy translating!
 
 ## Contributing to Airflow Core
 
