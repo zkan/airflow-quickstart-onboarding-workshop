@@ -1,14 +1,14 @@
 # Installing Breeze
 
-## Install Breeze (Airflow dev CLI)
+## Install Breeze (Airflow development CLI)
 
-From the repository root:
+From the repository root, run the following command to install Breeze:
 
 ```bash
 uv tool install -e ./dev/breeze
 ```
 
-Verify:
+Verify the installation:
 
 ```bash
 breeze --help
