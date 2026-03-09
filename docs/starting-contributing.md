@@ -3,16 +3,20 @@
 In this workshop, we'll start with documentation or translation contributions.
 These are the easiest and most beginner-friendly ways to get involved.
 
-You don't need to understand Airflow internals — just improve clarity or
+You don't need to understand Airflow internals - just improve clarity or
 language support.
 
 ## Starting Airflow with Breeze
+
+Run the following command:
 
 ```bash
 breeze start-airflow
 ```
 
-It may take a moment for Airflow to start. Once it's ready, your terminal should look like this:
+**Note:** To customize how the Breeze environment starts (for example, using a different executor), check the available options with `--help` or `-h`.
+
+The startup process may take a moment. Once Airflow is ready, your terminal should look like this:
 
 ![Terminal after Breeze to Start Airflow](./img/breeze-start-airflow.png)
 
@@ -30,27 +34,6 @@ After signing in, you should see the home page like this:
 
 You're now ready to start using and contributing to Apache Airflow!
 
-### Port Forwarding
-
-Ports are forwarded to the running docker containers for webserver and database:
-
-- 12322 -> forwarded to Airflow SSH server -> airflow:22
-- 28080 -> forwarded to Airflow API server (Airflow 3) or webserver (Airflow 2) -> airflow:8080
-- 25555 -> forwarded to Flower dashboard -> airflow:5555
-- 25433 -> forwarded to Postgres database -> postgres:5432
-- 23306 -> forwarded to MySQL database  -> mysql:3306
-- 26379 -> forwarded to Redis broker -> redis:6379
-- 25672 -> forwarded to RabbitMQ -> rabbitmq:5672
-
-Direct links to those services that you can use from the host:
-
-- SSH connection for remote debugging: `ssh -p 12322 airflow@localhost` (password: airflow)
-- API server or webserver: [http://localhost:28080](http://localhost:28080){target=_blank} (username: `admin`, password: `admin`)
-- Flower: [http://localhost:25555](http://localhost:25555){target=_blank}
-- Postgres: `jdbc:postgresql://localhost:25433/airflow?user=postgres&password=airflow`
-- MySQL: `jdbc:mysql://localhost:23306/airflow?user=root`
-- Redis: `redis://localhost:26379/0`
-
 ### How to Add Stuff in Breeze
 
 - Your dags for webserver and scheduler are read from `/files/dags` directory which is mounted from folder in Airflow sources:
@@ -65,6 +48,19 @@ Direct links to those services that you can use from the host:
 - You can also share other files, put them under `[YOUR_OWN_WORKING_DIRECTORY]/airflow/files` folder and they will be visible in `/files/` folder inside the container.
 
 **Note:** `[YOUR_OWN_WORKING_DIRECTORY]` refers to the local directory containing your forked Apache Airflow repository.
+
+### Ports Forwarded and Direct Links
+
+The table below shows the ports forwarded to the running Docker containers for the webserver and database, along with direct links you can use from the host.
+
+| Local Port | Forwarded To | Container Destination | Link |
+| ---------- | ------------ | --------------------- | ---- |
+| 12322 | Airflow SSH Server | `airflow:22` | `ssh -p 12322 airflow@localhost` (password: `airflow`) |
+| 28080 | Airflow API Server (Airflow 3) or Webserver (Airflow 2) | `airflow:8080` | [http://localhost:28080](http://localhost:28080){target=_blank} (username: `admin`, password: `admin`) |
+| 25555 | Flower Dashboard | `airflow:5555` | [http://localhost:25555](http://localhost:25555){target=_blank} |
+| 25433 | PostgreSQL Database | `postgres:5432` | `jdbc:postgresql://localhost:25433/airflow?user=postgres&password=airflow` |
+| 23306 | MySQL Database | `mysql:3306` | `jdbc:mysql://localhost:23306/airflow?user=root` |
+| 26379 | Redis | `redis:6379` | `redis://localhost:26379/0` |
 
 ## Contributing to Documentation
 
