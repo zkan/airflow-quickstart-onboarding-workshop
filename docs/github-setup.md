@@ -6,7 +6,7 @@ Create a GitHub account if you don't already have one.
 
 ## Fork the Apache Airflow repository
 
-Fork [the Apache Airflow repository](https://github.com/apache/airflow/){target=_blank} to your GitHub account.
+Fork the [Apache Airflow repository](https://github.com/apache/airflow/){target=_blank} to your GitHub account.
 
 ## Clone your fork locally
 
