@@ -8,7 +8,9 @@ language support.
 
 ## Starting Airflow with Breeze
 
-Run the following command:
+In this section, we start Apache Airflow locally using Breeze, the development CLI that provides a ready-to-use Docker-based environment.
+
+Run the following command to start Airflow:
 
 ```bash
 breeze start-airflow
